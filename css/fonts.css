@@ -1,0 +1,20 @@
+/* ================================================================
+   GIGADRIVE — CUSTOM FONT DECLARATIONS
+   ================================================================
+   To use the authentic UK number plate font (Charles Wright),
+   purchase the font and place the files in the fonts/ folder,
+   then uncomment the @font-face block below.
+   ================================================================ */
+
+/*
+@font-face {
+  font-family: 'CharlesWright';
+  src: url('../fonts/CharlesWright-Bold.woff2') format('woff2'),
+       url('../fonts/CharlesWright-Bold.woff')  format('woff');
+  font-weight: 700 900;
+  font-display: swap;
+}
+*/
+/* After adding the font, update variables.css:
+   --plate-font: 'CharlesWright', 'Arial Black', sans-serif;
+*/

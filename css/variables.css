@@ -1,0 +1,120 @@
+/* ================================================================
+   GIGADRIVE — THEME CONFIGURATION
+   ================================================================
+   ✏️  TO CHANGE THE COLOUR SCHEME: edit the values in :root below.
+   🖼️  TO ADD A LOGO: see the LOGO section — drop your file into
+       images/ and update the <img> src in each HTML page.
+   Two ready-made alternate themes are commented out at the bottom.
+   ================================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
+
+:root {
+
+  /* ────────────────────────────────────────────────────────────
+     COLOUR SCHEME
+     Primary   : Midnight Navy   — trust, authority, professionalism
+     Accent    : Pink           — energy, bold, striking
+     ──────────────────────────────────────────────────────────── */
+  --c-primary:        #0B1F3A;   /* Midnight Navy                  */
+  --c-primary-mid:    #14335F;   /* Mid Navy                       */
+  --c-primary-light:  #1E4D8C;   /* Light Navy                     */
+
+  --c-accent:         #C43B75;   /* Pink                           */
+  --c-accent-dark:    #982C58;   /* Dark Pink (hover/text)         */
+  --c-accent-pale:    #FAEDF3;   /* Very pale pink (bg tint)       */
+
+  --c-white:          #FFFFFF;
+  --c-dark:           #0D1117;
+  --c-body:           #374151;
+  --c-muted:          #6B7280;
+  --c-border:         #E5E7EB;
+  --c-surface:        #F9FAFB;
+  --c-surface-2:      #F0F2F5;
+
+  --c-success:        #16A34A;
+  --c-danger:         #DC2626;
+
+  /* Social brand colours */
+  --c-facebook:       #1877F2;
+  --c-instagram:      #E1306C;
+  --c-tiktok:         #010101;
+  --c-youtube:        #FF0000;
+  --c-twitter:        #000000;
+
+  /* ────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     Barlow Condensed: headings  — bold, punchy, modern
+     Barlow:           body copy — clean and highly readable
+     ──────────────────────────────────────────────────────────── */
+  --font-head: 'Barlow Condensed', 'Impact', sans-serif;
+  --font-body: 'Barlow', 'Segoe UI', sans-serif;
+
+  /* ────────────────────────────────────────────────────────────
+     LOGO CONFIGURATION
+     1. Add your logo file to the images/ folder
+     2. In each HTML file, replace the text logo block with:
+        <img src="images/logo.svg" alt="GIGADRIVE" class="site-logo" />
+     3. Adjust height below to fit your logo perfectly
+     Tip: SVG or PNG with transparent background works best.
+     ──────────────────────────────────────────────────────────── */
+  --logo-h:        50px;   /* Navbar logo max-height  */
+  --logo-footer-h: 38px;   /* Footer logo max-height  */
+
+  /* ────────────────────────────────────────────────────────────
+     LAYOUT
+     ──────────────────────────────────────────────────────────── */
+  --max-w:       1160px;
+  --nav-h:       70px;
+  --radius:      8px;
+  --radius-lg:   16px;
+  --radius-pill: 999px;
+  --ease:        0.28s ease;
+
+  /* ────────────────────────────────────────────────────────────
+     SHADOWS
+     ──────────────────────────────────────────────────────────── */
+  --sh-xs: 0 1px 3px rgba(0,0,0,0.08);
+  --sh-sm: 0 2px 10px rgba(0,0,0,0.10);
+  --sh-md: 0 6px 24px rgba(0,0,0,0.13);
+  --sh-lg: 0 18px 56px rgba(0,0,0,0.18);
+  --sh-glow: 0 0 0 4px rgba(196,59,117,0.30);
+
+  /* ────────────────────────────────────────────────────────────
+     UK NUMBER PLATE  —  G16 DRV
+     ──────────────────────────────────────────────────────────── */
+  --plate-bg:     #FDFD00;   /* Standard UK yellow                 */
+  --plate-txt:    #000000;
+  --plate-border: #222222;
+  /* For the authentic UK plate font, purchase "Charles Wright" and
+     add it via css/fonts.css, then change the value below:
+     --plate-font: 'CharlesWright', 'Arial Black', sans-serif;     */
+  --plate-font:   'Arial Black', 'Arial Bold', sans-serif;
+}
+
+/* ──────────────────────────────────────────────────────────────
+   ALTERNATE THEME A — Racing Red
+   Uncomment block to activate:
+   ──────────────────────────────────────────────────────────── */
+/*
+:root {
+  --c-primary:        #1A0000;
+  --c-primary-mid:    #7B0000;
+  --c-primary-light:  #C62828;
+  --c-accent:         #C43B75;
+  --c-accent-dark:    #982C58;
+}
+*/
+
+/* ──────────────────────────────────────────────────────────────
+   ALTERNATE THEME B — British Racing Green
+   ──────────────────────────────────────────────────────────── */
+/*
+:root {
+  --c-primary:        #0A1F0F;
+  --c-primary-mid:    #1B5E20;
+  --c-primary-light:  #388E3C;
+  --c-accent:         #C43B75;
+  --c-accent-dark:    #982C58;
+}
+*/
