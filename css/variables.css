@@ -16,17 +16,17 @@
      Primary   : Midnight Navy   — trust, authority, professionalism
      Accent    : Pink           — energy, bold, striking
      ──────────────────────────────────────────────────────────── */
-  --c-primary:        #0B1F3A;   /* Midnight Navy                  */
-  --c-primary-mid:    #14335F;   /* Mid Navy                       */
-  --c-primary-light:  #1E4D8C;   /* Light Navy                     */
+  --c-primary:        #12345A;   /* Midnight Navy                  */
+  --c-primary-mid:    #1A4D82;   /* Mid Navy                       */
+  --c-primary-light:  #2468B0;   /* Light Navy                     */
 
   --c-accent:         #FF2E9A;   /* Pink  — "GIGA"                 */
   --c-accent-dark:    #CC2579;   /* Dark Pink (hover/text)         */
   --c-accent-pale:    #FFF0F7;   /* Very pale pink (bg tint)       */
 
-  --c-accent-2:       #CFFF04;   /* Acid Green — "DRIVE"           */
-  --c-accent-2-dark:  #A6CC03;   /* Dark Acid Green (hover/text)   */
-  --c-accent-2-pale:  #F8FFD6;   /* Very pale green (bg tint)      */
+  --c-accent-2:       #D4DE28;   /* Acid Green — "DRIVE"           */
+  --c-accent-2-dark:  #A9B220;   /* Dark Acid Green (hover/text)   */
+  --c-accent-2-pale:  #FAFDE8;   /* Very pale green (bg tint)      */
 
   --c-white:          #FFFFFF;
   --c-dark:           #0D1117;
@@ -59,17 +59,20 @@
      1. Add your logo file to the images/ folder
      2. In each HTML file, replace the text logo block with:
         <img src="images/logo.svg" alt="GIGADRIVE" class="site-logo" />
-     3. Adjust height below to fit your logo perfectly
+     3. Adjust --logo-h below to fit your logo perfectly
+     4. If you increase --logo-h, also increase --nav-h (in LAYOUT
+        below) to match — otherwise the logo will be clipped by
+        the navbar. A good rule of thumb: --nav-h = --logo-h + 20px
      Tip: SVG or PNG with transparent background works best.
      ──────────────────────────────────────────────────────────── */
-  --logo-h:        50px;   /* Navbar logo max-height  */
+  --logo-h:        150px;  /* Navbar logo max-height  */
   --logo-footer-h: 38px;   /* Footer logo max-height  */
 
   /* ────────────────────────────────────────────────────────────
      LAYOUT
      ──────────────────────────────────────────────────────────── */
   --max-w:       1160px;
-  --nav-h:       70px;
+  --nav-h:       170px;
   --radius:      8px;
   --radius-lg:   16px;
   --radius-pill: 999px;
