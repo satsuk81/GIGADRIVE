@@ -251,6 +251,12 @@ h1,h2,h3,h4 {
   font-style: normal;
   color: var(--c-accent);
 }
+.nav-wordmark span {
+  color: var(--c-accent-2);
+}
+.drive {
+  color: var(--c-accent-2);
+}
 .nav-tagline {
   display: block;
   font-size: 0.58rem;
@@ -400,6 +406,7 @@ h1,h2,h3,h4 {
   margin-bottom: 0.6rem;
   text-transform: uppercase;
 }
+.accent { color: var(--c-accent); }
 .hero-h1 .accent { color: var(--c-accent); }
 .hero-slogan {
   font-family: var(--font-head);
@@ -1096,6 +1103,7 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   margin-bottom: 0.2rem;
 }
 .footer-brand .wordmark em { font-style: normal; color: var(--c-accent); }
+.footer-brand .wordmark span { color: var(--c-accent-2); }
 .footer-brand .slogan {
   font-size: 0.72rem;
   font-family: var(--font-head);

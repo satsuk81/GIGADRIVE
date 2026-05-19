@@ -20,9 +20,13 @@
   --c-primary-mid:    #14335F;   /* Mid Navy                       */
   --c-primary-light:  #1E4D8C;   /* Light Navy                     */
 
-  --c-accent:         #C43B75;   /* Pink                           */
-  --c-accent-dark:    #982C58;   /* Dark Pink (hover/text)         */
-  --c-accent-pale:    #FAEDF3;   /* Very pale pink (bg tint)       */
+  --c-accent:         #FF2E9A;   /* Pink  — "GIGA"                 */
+  --c-accent-dark:    #CC2579;   /* Dark Pink (hover/text)         */
+  --c-accent-pale:    #FFF0F7;   /* Very pale pink (bg tint)       */
+
+  --c-accent-2:       #CFFF04;   /* Acid Green — "DRIVE"           */
+  --c-accent-2-dark:  #A6CC03;   /* Dark Acid Green (hover/text)   */
+  --c-accent-2-pale:  #F8FFD6;   /* Very pale green (bg tint)      */
 
   --c-white:          #FFFFFF;
   --c-dark:           #0D1117;
@@ -78,7 +82,7 @@
   --sh-sm: 0 2px 10px rgba(0,0,0,0.10);
   --sh-md: 0 6px 24px rgba(0,0,0,0.13);
   --sh-lg: 0 18px 56px rgba(0,0,0,0.18);
-  --sh-glow: 0 0 0 4px rgba(196,59,117,0.30);
+  --sh-glow: 0 0 0 4px rgba(255,46,154,0.30);
 
   /* ────────────────────────────────────────────────────────────
      UK NUMBER PLATE  —  G16 DRV
