@@ -96,7 +96,7 @@
   /* For the authentic UK plate font, purchase "Charles Wright" and
      add it via css/fonts.css, then change the value below:
      --plate-font: 'CharlesWright', 'Arial Black', sans-serif;     */
-  --plate-font:   'Arial Black', 'Arial Bold', sans-serif;
+  --plate-font:   'UKNumberPlate', 'Arial Black', sans-serif;
 }
 
 /* ──────────────────────────────────────────────────────────────
