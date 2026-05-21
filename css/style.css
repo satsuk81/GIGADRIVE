@@ -1288,6 +1288,7 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   grid-template-columns: 1fr 1.4fr;
   gap: 4rem;
   align-items: start;
+  min-width: 0;
 }
 .contact-info { background: var(--c-primary); border-radius: var(--radius-lg); padding: 2.5rem; }
 .contact-info h2 { color: var(--c-white); font-size: 1.8rem; margin-bottom: 1.5rem; }
@@ -1390,4 +1391,17 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   .story-stats { grid-template-columns: 1fr; }
   .page-hero { padding: 6rem 0 2.5rem; }
   .legal-nav { gap: 0.4rem; }
+  .contact-grid { gap: 1.5rem; }
+  .contact-info { padding: 1.5rem; border-radius: var(--radius); }
+  .contact-info h2 { font-size: 1.4rem; }
+  .contact-detail { gap: 0.75rem; margin-bottom: 1.2rem; padding-bottom: 1.2rem; }
+  .contact-detail-icon { width: 36px; height: 36px; flex-shrink: 0; }
+  .contact-detail-icon svg { width: 18px; height: 18px; }
+  .contact-form-wrap h2 { font-size: 1.4rem; }
+  .contact-plate-row { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea { font-size: 1rem; max-width: 100%; }
+  .area-tags { gap: 0.35rem; }
+  .area-tag { font-size: 0.72rem; padding: 0.25rem 0.6rem; }
 }
