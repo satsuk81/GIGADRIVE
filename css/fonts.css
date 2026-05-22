@@ -6,6 +6,14 @@
    then uncomment the @font-face block below.
    ================================================================ */
 
+/* Plate font — UKNumberPlate (local font file) */
+@font-face {
+  font-family: 'UKNumberPlate';
+  src: url('fonts/UKNumberPlate.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
+
 /*
 @font-face {
   font-family: 'CharlesWright';
