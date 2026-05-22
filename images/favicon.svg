@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Navy background -->
+  <rect width="64" height="64" rx="10" fill="#12345A"/>
+
+  <!-- "G" — pink -->
+  <text x="16" y="50" font-family="'Barlow Condensed', Impact, 'Arial Narrow', sans-serif"
+    font-size="58" font-weight="900" text-anchor="middle"
+    fill="#FF2E9A">G</text>
+
+  <!-- "D" — acid green -->
+  <text x="46" y="50" font-family="'Barlow Condensed', Impact, 'Arial Narrow', sans-serif"
+    font-size="58" font-weight="900" text-anchor="middle"
+    fill="#D4DE28">D</text>
+</svg>
