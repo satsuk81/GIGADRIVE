@@ -85,28 +85,58 @@ document.addEventListener('DOMContentLoaded', () => {
     p.addEventListener('mouseleave', () => { p.style.transform = ''; });
   });
 
-  // ── Contact form (simulated send) ───────────────────────────
+  // ── Contact form — EmailJS ───────────────────────────────────
+  // TODO: Replace the three placeholder values below with your real EmailJS IDs.
+  // Sign up at https://www.emailjs.com, create a service + template, then copy:
+  //   YOUR_PUBLIC_KEY  → Account > API Keys
+  //   YOUR_SERVICE_ID  → Email Services > your service
+  //   YOUR_TEMPLATE_ID → Email Templates > your template
+  const EMAILJS_PUBLIC_KEY  = 'vO2HzkiGLBq6IuzPT';
+  const EMAILJS_SERVICE_ID  = 'service_5rrapzf';
+  const EMAILJS_TEMPLATE_ID = 'template_xftl3xd';
+
+  function sendContactForm(formEl) {
+    return emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formEl);
+  }
+
   const form = document.getElementById('gigaContactForm');
   if (form) {
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+
     form.addEventListener('submit', e => {
       e.preventDefault();
-      const btn = form.querySelector('[type="submit"]');
+      const btn  = form.querySelector('[type="submit"]');
       const orig = btn.innerHTML;
-      btn.innerHTML  = '⏳ Sending…';
-      btn.disabled   = true;
-      // Replace setTimeout with real fetch to your backend/EmailJS/Formspree:
-      setTimeout(() => {
-        btn.innerHTML  = '✅ Message Sent!';
-        btn.style.background    = 'var(--c-success)';
-        btn.style.borderColor   = 'var(--c-success)';
-        form.reset();
-        setTimeout(() => {
+
+      const successEl = document.getElementById('form-success');
+      const errorEl   = document.getElementById('form-error');
+      if (successEl) successEl.hidden = true;
+      if (errorEl)   errorEl.hidden   = true;
+
+      btn.innerHTML = '⏳ Sending…';
+      btn.disabled  = true;
+
+      sendContactForm(form)
+        .then(() => {
+          btn.innerHTML          = '✅ Message Sent!';
+          btn.style.background   = 'var(--c-success)';
+          btn.style.borderColor  = 'var(--c-success)';
+          if (successEl) successEl.hidden = false;
+          form.reset();
+          setTimeout(() => {
+            btn.innerHTML         = orig;
+            btn.style.background  = '';
+            btn.style.borderColor = '';
+            btn.disabled          = false;
+          }, 4500);
+        })
+        .catch(() => {
           btn.innerHTML = orig;
-          btn.style.background   = '';
-          btn.style.borderColor  = '';
-          btn.disabled = false;
-        }, 4500);
-      }, 1600);
+          btn.disabled  = false;
+          if (errorEl) errorEl.hidden = false;
+        });
     });
   }
 
