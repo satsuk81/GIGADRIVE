@@ -77,7 +77,7 @@ Search across all files for the placeholder values and replace with your real de
 | Placeholder | Replace with |
 |---|---|
 | `07700 000 000` | Your phone number |
-| `hello@gigadrive.co.uk` | Your email address |
+| `gigadriveuk@gmail.com` | Your email address |
 | `https://www.facebook.com/GigaDrive` | Your Facebook page URL |
 | `https://www.instagram.com/GigaDrive` | Your Instagram URL |
 | `https://www.tiktok.com/@GigaDrive` | Your TikTok URL |
