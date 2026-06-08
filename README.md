@@ -1,6 +1,6 @@
 # GIGADRIVE — Website
 
-> **Get In Gear And Drive** · North Kent Driving School · Vehicle G16 DRV
+> **Get In Gear And Drive** · North Kent Driving School · Vehicle GIGADRV
 
 A clean, modern, fully responsive 5-page website for the GIGADRIVE driving school, built with pure HTML, CSS and vanilla JavaScript — no build tools, no frameworks, no dependencies beyond Google Fonts.
 
@@ -141,7 +141,7 @@ This site is plain HTML — deploy anywhere with zero build steps:
 
 ## 🔢 Number Plate Styling
 
-The G16 DRV number plate is rendered entirely in CSS — no image needed.
+The GIGADRV number plate is rendered entirely in CSS — no image needed.
 
 - `.plate.plate--lg` — Large (hero / CTA band)
 - `.plate.plate--md` — Medium (lesson cards, info cards)
