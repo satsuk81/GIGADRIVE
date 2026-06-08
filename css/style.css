@@ -1337,6 +1337,8 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
 .btn-full { width: 100%; }
 .form-success { background: #d1fae5; border: 1px solid #10b981; border-radius: var(--radius); padding: 1rem 1.2rem; font-size: 0.9rem; color: #065f46; margin-top: 1rem; }
 .form-error   { background: #fee2e2; border: 1px solid #ef4444; border-radius: var(--radius); padding: 1rem 1.2rem; font-size: 0.9rem; color: #991b1b; margin-top: 1rem; }
+.field-error  { color: #dc2626; font-size: 0.8rem; margin-top: 0.3rem; display: block; }
+input.input--invalid, select.input--invalid, textarea.input--invalid { border-color: #ef4444 !important; }
 
 .map-placeholder {
   width: 100%;

@@ -99,11 +99,71 @@ document.addEventListener('DOMContentLoaded', () => {
     return emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formEl);
   }
 
+  function validateForm(formEl) {
+    let valid = true;
+
+    // Remove any previous inline errors
+    formEl.querySelectorAll('.field-error').forEach(el => el.remove());
+    formEl.querySelectorAll('.input--invalid').forEach(el => el.classList.remove('input--invalid'));
+
+    function setError(inputEl, msg) {
+      inputEl.classList.add('input--invalid');
+      const err = document.createElement('span');
+      err.className = 'field-error';
+      err.textContent = msg;
+      inputEl.insertAdjacentElement('afterend', err);
+      valid = false;
+    }
+
+    const name    = formEl.querySelector('#f-name');
+    const phone   = formEl.querySelector('#f-phone');
+    const email   = formEl.querySelector('#f-email');
+    const privacy = formEl.querySelector('#f-privacy');
+
+    if (!name.value.trim()) {
+      setError(name, 'Please enter your name.');
+    }
+
+    const phoneTrimmed = phone.value.trim().replace(/\s/g, '');
+    if (!phoneTrimmed) {
+      setError(phone, 'Please enter your phone number.');
+    } else if (!/^(\+447|07)\d{9}$/.test(phoneTrimmed)) {
+      setError(phone, 'Please enter a valid UK mobile number (e.g. 07700 000 000).');
+    }
+
+    const emailTrimmed = email.value.trim();
+    if (!emailTrimmed) {
+      setError(email, 'Please enter your email address.');
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
+      setError(email, 'Please enter a valid email address.');
+    }
+
+    if (!privacy.checked) {
+      const privacyLabel = formEl.querySelector('label[for="f-privacy"]');
+      const err = document.createElement('span');
+      err.className = 'field-error';
+      err.textContent = 'You must agree to the Privacy Policy to continue.';
+      privacyLabel.insertAdjacentElement('afterend', err);
+      valid = false;
+    }
+
+    return valid;
+  }
+
   const form = document.getElementById('gigaContactForm');
   if (form) {
     if (typeof emailjs !== 'undefined') {
       emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
     }
+
+    // Clear field errors when user corrects a field
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      el.addEventListener('input', () => {
+        el.classList.remove('input--invalid');
+        const err = el.parentElement.querySelector('.field-error');
+        if (err) err.remove();
+      });
+    });
 
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -114,6 +174,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const errorEl   = document.getElementById('form-error');
       if (successEl) successEl.hidden = true;
       if (errorEl)   errorEl.hidden   = true;
+
+      if (!validateForm(form)) return;
 
       btn.innerHTML = '⏳ Sending…';
       btn.disabled  = true;
