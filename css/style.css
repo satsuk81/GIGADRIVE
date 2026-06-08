@@ -162,6 +162,7 @@ h1,h2,h3,h4 {
   display: inline-flex;
   align-items: stretch;
   gap: 0;
+  white-space: nowrap;
   background: #F5C518; /* UK rear plate yellow */
   color: #000;
   font-family: var(--plate-font);
