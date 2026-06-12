@@ -1191,6 +1191,10 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   .plate--lg { font-size: 1.7rem; }
   .trust-strip-inner { gap: 1rem; }
 }
+@media (orientation: landscape) and (max-height: 500px) {
+  .nav-links  { display: none; }
+  .nav-burger { display: flex; }
+}
 @media (max-width: 480px) {
   .pricing-grid { grid-template-columns: 1fr; }
   .price-card.is-featured { transform: none; }
