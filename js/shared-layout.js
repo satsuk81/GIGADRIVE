@@ -41,38 +41,15 @@ const SHARED_HEADER_SOCIAL = SHARED_HEADER
     '  <a href="social.html">Social</a>\n  <a href="contact.html">Contact</a>'
   );
 
-const SHARED_HEADER_LEGAL = `
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="wrap nav-inner">
-    <a href="index.html" class="nav-brand" aria-label="GIGADRIVE home">
-      <div>
-        <img src="images/logo3.png" alt="GIGADRIVE" class="site-logo" />
-      </div>
-    </a>
-    <ul class="nav-links" role="list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="lessons.html">Lessons &amp; Prices</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="privacy.html">Privacy</a></li>
-      <li><a href="contact.html" class="nav-book">Book Now</a></li>
-    </ul>
-    <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<nav class="nav-drawer" aria-label="Mobile navigation">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="lessons.html">Lessons &amp; Prices</a>
-  <a href="faq.html">FAQ</a>
-  <a href="contact.html">Contact</a>
-  <a href="privacy.html">Privacy</a>
-  <a href="contact.html" class="nav-book">Book Now</a>
-</nav>
-`;
+const SHARED_HEADER_LEGAL = SHARED_HEADER
+  .replace(
+    '      <li><a href="contact.html">Contact</a></li>',
+    '      <li><a href="contact.html">Contact</a></li>\n      <li><a href="privacy.html">Privacy</a></li>'
+  )
+  .replace(
+    '  <a href="contact.html">Contact</a>',
+    '  <a href="contact.html">Contact</a>\n  <a href="privacy.html">Privacy</a>'
+  );
 
 const SHARED_HEADER_HOLDING = `
 <nav class="navbar" role="navigation" aria-label="Main navigation">

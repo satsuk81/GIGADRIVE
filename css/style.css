@@ -308,6 +308,8 @@ h1,h2,h3,h4 {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
+  margin-left: auto;
+  flex-shrink: 0;
   background: none;
   border: none;
   padding: 0.4rem;
