@@ -1087,8 +1087,8 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
 .badge-outline   { border: 1.5px solid var(--c-primary); color: var(--c-primary); }
 
 /* ================================================================
+   FOOTER
 ================================================================ */
-FOOTER
 .footer {
   background: var(--c-dark);
   color: rgba(255,255,255,0.65);
