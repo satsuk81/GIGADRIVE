@@ -49,6 +49,15 @@ const SHARED_HEADER_LEGAL = `
         <img src="images/logo3.png" alt="GIGADRIVE" class="site-logo" />
       </div>
     </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="lessons.html">Lessons &amp; Prices</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="contact.html" class="nav-book">Book Now</a></li>
+    </ul>
     <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -60,7 +69,20 @@ const SHARED_HEADER_LEGAL = `
   <a href="lessons.html">Lessons &amp; Prices</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html">Contact</a>
+  <a href="privacy.html">Privacy</a>
   <a href="contact.html" class="nav-book">Book Now</a>
+</nav>
+`;
+
+const SHARED_HEADER_HOLDING = `
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="nav-brand" aria-label="GIGADRIVE home">
+      <div>
+        <img src="images/logo3.png" alt="GIGADRIVE" class="site-logo" />
+      </div>
+    </a>
+  </div>
 </nav>
 `;
 
@@ -165,6 +187,21 @@ const SHARED_FOOTER_LEGAL = `
 </footer>
 `;
 
+const SHARED_FOOTER_HOLDING = `
+<footer class="footer" style="padding: 0;" role="contentinfo">
+  <div class="footer-bottom">
+    <div class="wrap footer-bottom-inner">
+      <p>© 2026 <em class="accent">GIGA</em><span class="drive">DRIVE</span>. All rights reserved. Gravesend, Kent, UK.</p>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="privacy.html#cookies">Cookies</a>
+        <a href="privacy.html#terms">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+`;
+
 function injectSharedLayout() {
   const layout = document.body?.dataset.layout || 'main';
 
@@ -177,6 +214,9 @@ function injectSharedLayout() {
   } else if (layout === 'legal') {
     headerMarkup = SHARED_HEADER_LEGAL;
     footerMarkup = SHARED_FOOTER_LEGAL;
+  } else if (layout === 'holding') {
+    headerMarkup = SHARED_HEADER_HOLDING;
+    footerMarkup = SHARED_FOOTER_HOLDING;
   }
 
   const headerHost = document.getElementById('site-header');
