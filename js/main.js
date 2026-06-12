@@ -25,21 +25,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.nav-burger');
   const drawer = document.querySelector('.nav-drawer');
   if (burger && drawer) {
-    burger.addEventListener('click', () => {
-      const open = drawer.classList.toggle('is-open');
-      burger.setAttribute('aria-expanded', open);
+    const resetBurgerIcon = () => {
+      burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    };
+    const setDrawerState = isOpen => {
+      drawer.classList.toggle('is-open', isOpen);
+      burger.setAttribute('aria-expanded', String(isOpen));
+      drawer.setAttribute('aria-hidden', String(!isOpen));
       const [s1, s2, s3] = burger.querySelectorAll('span');
-      if (open) {
+      if (isOpen && s1 && s2 && s3) {
         s1.style.transform = 'rotate(45deg) translate(5px,5px)';
         s2.style.opacity   = '0';
         s3.style.transform = 'rotate(-45deg) translate(5px,-5px)';
       } else {
-        [s1, s2, s3].forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+        resetBurgerIcon();
       }
+    };
+
+    setDrawerState(false);
+
+    burger.addEventListener('click', () => {
+      setDrawerState(!drawer.classList.contains('is-open'));
     });
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      drawer.classList.remove('is-open');
-      burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+      setDrawerState(false);
     }));
   }
 
@@ -56,11 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── FAQ accordion ────────────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(q => {
+    q.setAttribute('aria-expanded', q.closest('.faq-item')?.classList.contains('open') ? 'true' : 'false');
     q.addEventListener('click', () => {
       const item   = q.closest('.faq-item');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        const btn = i.querySelector('.faq-q');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
