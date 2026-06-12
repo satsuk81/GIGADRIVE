@@ -21,7 +21,8 @@ A clean, modern, fully responsive 5-page website for the GIGADRIVE driving schoo
 │   └── fonts.css       @font-face for Charles Wright (optional)
 │
 ├── js/
-│   └── main.js         Navbar, mobile menu, FAQ, animations, form
+│   ├── shared-layout.js Shared header/footer injection (`data-layout`: main, social, legal)
+│   └── main.js          Navbar, mobile menu, FAQ, animations, form
 │
 └── images/
     ├── logo.svg            (add your own logo here)
