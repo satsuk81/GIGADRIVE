@@ -29,7 +29,7 @@ A clean, modern, fully responsive 5-page website for the GIGADRIVE driving schoo
     ├── logo-white.svg      (white variant for footer/dark backgrounds)
     ├── instructor.jpg      (add instructor photo)
     ├── og-image.jpg        (1200×630 social share image)
-    └── favicon.svg         (browser tab icon)
+    └── GD_32x32.ico        (browser tab icon)
 ```
 
 ---

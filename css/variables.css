@@ -7,7 +7,7 @@
    Two ready-made alternate themes are commented out at the bottom.
    ================================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
+/* Both fonts are now loaded locally from css/fonts.css — no Google Fonts dependency. */
 
 :root {
 
@@ -52,7 +52,7 @@
      Barlow:           body copy — clean and highly readable
      ──────────────────────────────────────────────────────────── */
   --font-head: 'Barlow Condensed', 'Impact', sans-serif;
-  --font-body: 'Barlow', 'Segoe UI', sans-serif;
+  --font-body: 'Outfit', 'Segoe UI', sans-serif;
 
   /* ────────────────────────────────────────────────────────────
      LOGO CONFIGURATION
