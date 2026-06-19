@@ -25,21 +25,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.nav-burger');
   const drawer = document.querySelector('.nav-drawer');
   if (burger && drawer) {
-    burger.addEventListener('click', () => {
-      const open = drawer.classList.toggle('is-open');
-      burger.setAttribute('aria-expanded', open);
+    const resetBurgerIcon = () => {
+      burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+    };
+    const setDrawerState = isOpen => {
+      drawer.classList.toggle('is-open', isOpen);
+      burger.setAttribute('aria-expanded', String(isOpen));
+      drawer.setAttribute('aria-hidden', String(!isOpen));
       const [s1, s2, s3] = burger.querySelectorAll('span');
-      if (open) {
+      if (isOpen && s1 && s2 && s3) {
         s1.style.transform = 'rotate(45deg) translate(5px,5px)';
         s2.style.opacity   = '0';
         s3.style.transform = 'rotate(-45deg) translate(5px,-5px)';
       } else {
-        [s1, s2, s3].forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+        resetBurgerIcon();
       }
+    };
+
+    setDrawerState(false);
+
+    burger.addEventListener('click', () => {
+      setDrawerState(!drawer.classList.contains('is-open'));
     });
     drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      drawer.classList.remove('is-open');
-      burger.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
+      setDrawerState(false);
     }));
   }
 
@@ -56,11 +65,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── FAQ accordion ────────────────────────────────────────────
   document.querySelectorAll('.faq-q').forEach(q => {
+    q.setAttribute('aria-expanded', q.closest('.faq-item')?.classList.contains('open') ? 'true' : 'false');
     q.addEventListener('click', () => {
       const item   = q.closest('.faq-item');
       const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        const btn = i.querySelector('.faq-q');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        q.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
@@ -99,11 +116,71 @@ document.addEventListener('DOMContentLoaded', () => {
     return emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formEl);
   }
 
+  function validateForm(formEl) {
+    let valid = true;
+
+    // Remove any previous inline errors
+    formEl.querySelectorAll('.field-error').forEach(el => el.remove());
+    formEl.querySelectorAll('.input--invalid').forEach(el => el.classList.remove('input--invalid'));
+
+    function setError(inputEl, msg) {
+      inputEl.classList.add('input--invalid');
+      const err = document.createElement('span');
+      err.className = 'field-error';
+      err.textContent = msg;
+      inputEl.insertAdjacentElement('afterend', err);
+      valid = false;
+    }
+
+    const name    = formEl.querySelector('#f-name');
+    const phone   = formEl.querySelector('#f-phone');
+    const email   = formEl.querySelector('#f-email');
+    const privacy = formEl.querySelector('#f-privacy');
+
+    if (!name.value.trim()) {
+      setError(name, 'Please enter your name.');
+    }
+
+    const phoneTrimmed = phone.value.trim().replace(/\s/g, '');
+    if (!phoneTrimmed) {
+      setError(phone, 'Please enter your phone number.');
+    } else if (!/^(\+447|07)\d{9}$/.test(phoneTrimmed)) {
+      setError(phone, 'Please enter a valid UK mobile number (e.g. 07700 000 000).');
+    }
+
+    const emailTrimmed = email.value.trim();
+    if (!emailTrimmed) {
+      setError(email, 'Please enter your email address.');
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailTrimmed)) {
+      setError(email, 'Please enter a valid email address.');
+    }
+
+    if (!privacy.checked) {
+      const privacyLabel = formEl.querySelector('label[for="f-privacy"]');
+      const err = document.createElement('span');
+      err.className = 'field-error';
+      err.textContent = 'You must agree to the Privacy Policy to continue.';
+      privacyLabel.insertAdjacentElement('afterend', err);
+      valid = false;
+    }
+
+    return valid;
+  }
+
   const form = document.getElementById('gigaContactForm');
   if (form) {
     if (typeof emailjs !== 'undefined') {
       emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
     }
+
+    // Clear field errors when user corrects a field
+    form.querySelectorAll('input, select, textarea').forEach(el => {
+      el.addEventListener('input', () => {
+        el.classList.remove('input--invalid');
+        const err = el.parentElement.querySelector('.field-error');
+        if (err) err.remove();
+      });
+    });
 
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -114,6 +191,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const errorEl   = document.getElementById('form-error');
       if (successEl) successEl.hidden = true;
       if (errorEl)   errorEl.hidden   = true;
+
+      if (!validateForm(form)) return;
 
       btn.innerHTML = '⏳ Sending…';
       btn.disabled  = true;
