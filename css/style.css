@@ -57,7 +57,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 h1,h2,h3,h4 {
   font-family: var(--font-head);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.01em;
 }
@@ -246,14 +246,14 @@ h1,h2,h3,h4 {
 /* Text logo (shown when no image is set) */
 .nav-wordmark {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.7rem;
   letter-spacing: -0.02em;
   color: var(--c-white);
   line-height: 1;
 }
 .nav-wordmark em {
-  font-style: normal;
+  font-style: italic;
   color: var(--c-accent);
 }
 .nav-wordmark span {
@@ -1110,7 +1110,7 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   line-height: 1;
   margin-bottom: 0.2rem;
 }
-.footer-brand .wordmark em { font-style: normal; color: var(--c-accent); }
+.footer-brand .wordmark em { font-style: italic; color: var(--c-accent); }
 .footer-brand .wordmark span { color: var(--c-accent-2); }
 .footer-brand .slogan {
   font-size: 0.72rem;
