@@ -57,7 +57,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 
 h1,h2,h3,h4 {
   font-family: var(--font-head);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.01em;
 }
@@ -413,8 +413,8 @@ h1,h2,h3,h4 {
   margin-bottom: 0.6rem;
   text-transform: uppercase;
 }
-.accent { color: var(--c-accent); font-style: normal; }
-.hero-h1 .accent { color: var(--c-accent); font-style: normal; }
+.accent { color: var(--c-accent); font-style: italic; }
+.hero-h1 .accent { color: var(--c-accent); font-style: italic; }
 .hero-slogan {
   font-family: var(--font-head);
   font-size: clamp(1rem, 2vw, 1.35rem);
@@ -1190,6 +1190,7 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   .footer-bottom-inner { flex-direction: column; text-align: center; }
   .plate--lg { font-size: 1.7rem; }
   .trust-strip-inner { gap: 1rem; }
+  .site-logo { max-height: calc(var(--logo-h) * 0.8); }
 }
 @media (max-width: 880px) and (min-aspect-ratio: 1/1) {
   .nav-links  { display: none; }
