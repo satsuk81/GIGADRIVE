@@ -5,7 +5,7 @@ const SHARED_HEADER = `
   <div class="wrap nav-inner">
     <a href="index.html" class="nav-brand" aria-label="GIGADRIVE home">
       <div>
-        <img src="images/logo3.png" alt="GIGADRIVE" class="site-logo" />
+        <img src="images/GD_1-Primary Logo_Colored.png" alt="GIGADRIVE" class="site-logo" />
       </div>
     </a>
     <ul class="nav-links" role="list">
@@ -56,7 +56,7 @@ const SHARED_HEADER_HOLDING = `
   <div class="wrap nav-inner">
     <a href="index.html" class="nav-brand" aria-label="GIGADRIVE home">
       <div>
-        <img src="images/logo3.png" alt="GIGADRIVE" class="site-logo" />
+        <img src="images/GD_1-Primary Logo_Colored.png" alt="GIGADRIVE" class="site-logo" />
       </div>
     </a>
   </div>

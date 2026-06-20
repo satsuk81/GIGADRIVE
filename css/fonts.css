@@ -34,22 +34,22 @@
 }
 
 /* Heading font — Barlow Condensed ExtraBold (local font file) */
-@font-face {
+/* @font-face {
   font-family: 'Barlow Condensed';
   src: url('fonts/BarlowCondensed-ExtraBold.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 /* Heading font — Barlow Condensed Black (local font file) */
-@font-face {
+/* @font-face {
   font-family: 'Barlow Condensed';
   src: url('fonts/BarlowCondensed-Black.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 /* Plate font — UKNumberPlate (local font file) */
 @font-face {

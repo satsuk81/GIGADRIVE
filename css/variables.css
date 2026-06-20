@@ -36,6 +36,8 @@
   --c-accent-2-dark:  #ACB242;   /* Dark Lime Yellow — reserved for future use */
   --c-accent-2-pale:  #FBFCEE;   /* Pale Lime Yellow — reserved for future use */
 
+  --c-slogan:         #6dd1e3;   /* Aqua — PANTONE 305 C */
+
   --c-white:          #f7f1f3;   /* Warm White — body bg, text on dark sections, hero headings, form inputs, card backgrounds */
   --c-dark:           #20201e;   /* Charcoal Black — text on accent bg, icon fills, CTA heading, form input text, legal headings */
   --c-body:           #374151;   /* Slate Grey — default paragraph text, price list items, legal body copy */
