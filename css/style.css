@@ -414,13 +414,16 @@ h1,h2,h3,h4 {
   text-transform: uppercase;
 }
 .accent { color: var(--c-accent); font-style: italic; }
+.giga   { color: var(--c-accent); font-style: italic; }
 .hero-h1 .accent { color: var(--c-accent); font-style: italic; }
+.hero-h1 .giga   { color: var(--c-accent); font-style: italic; }
 .hero-slogan {
   font-family: var(--font-head);
   font-size: clamp(1rem, 2vw, 1.35rem);
   font-weight: 600;
   color: var(--c-slogan);
-  letter-spacing: 0.08em;
+  font-style: italic;
+  letter-spacing: 0.30em;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
@@ -896,6 +899,8 @@ h1,h2,h3,h4 {
 .cta-band h2 {
   font-size: clamp(2rem, 5vw, 3.5rem);
   color: var(--c-slogan);
+  font-style: italic;
+  letter-spacing: 0.14em;
   margin-bottom: 0.75rem;
   text-transform: uppercase;
 }
@@ -1119,6 +1124,7 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--c-slogan);
+  font-style: italic;
   margin-bottom: 1rem;
 }
 .footer-brand p { font-size: 0.88rem; line-height: 1.7; margin-bottom: 1.5rem; }
