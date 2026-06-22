@@ -1202,10 +1202,6 @@ select.form-ctrl  { appearance: none; background-image: url("data:image/svg+xml,
   .nav-links  { display: none; }
   .nav-burger { display: flex; }
 }
-@media (max-width: 880px) and (min-aspect-ratio: 1/1) {
-  .nav-links  { display: none; }
-  .nav-burger { display: flex; }
-}
 @media (max-width: 480px) {
   .pricing-grid { grid-template-columns: 1fr; }
   .price-card.is-featured { transform: none; }
