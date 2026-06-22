@@ -28,12 +28,12 @@ jobs:
         rm -f sitemap.xml
         rm -f faq.html
         rm -f social.html
-        rm -f privacy.html
-        rm -f index.html
+        #rm -f privacy.html
+        #rm -f index.html
 
         # Rename the holding files back to their original names if they exist
-        mv index-holding.html index.html || true
-        mv privacy-holding.html privacy.html || true
+        mv -f index-holding.html index.html || true
+        mv -f privacy-holding.html privacy.html || true
 
     - name: Commit and Push changes
       run: |
