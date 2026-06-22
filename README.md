@@ -1,6 +1,6 @@
 # GIGADRIVE — Website
 
-> **Get In Gear And Drive** · North Kent Driving School · Vehicle G16 DRV
+> **Get In Gear And Drive** · North Kent Driving School · Vehicle GIGADRV
 
 A clean, modern, fully responsive 5-page website for the GIGADRIVE driving school, built with pure HTML, CSS and vanilla JavaScript — no build tools, no frameworks, no dependencies beyond Google Fonts.
 
@@ -21,14 +21,15 @@ A clean, modern, fully responsive 5-page website for the GIGADRIVE driving schoo
 │   └── fonts.css       @font-face for Charles Wright (optional)
 │
 ├── js/
-│   └── main.js         Navbar, mobile menu, FAQ, animations, form
+│   ├── shared-layout.js Shared header/footer injection (`data-layout`: main, social, legal)
+│   └── main.js          Navbar, mobile menu, FAQ, animations, form
 │
 └── images/
     ├── logo.svg            (add your own logo here)
     ├── logo-white.svg      (white variant for footer/dark backgrounds)
     ├── instructor.jpg      (add instructor photo)
     ├── og-image.jpg        (1200×630 social share image)
-    └── favicon.svg         (browser tab icon)
+    └── GD_32x32.ico        (browser tab icon)
 ```
 
 ---
@@ -77,7 +78,7 @@ Search across all files for the placeholder values and replace with your real de
 | Placeholder | Replace with |
 |---|---|
 | `07700 000 000` | Your phone number |
-| `hello@gigadrive.co.uk` | Your email address |
+| `gigadriveuk@gmail.com` | Your email address |
 | `https://www.facebook.com/GigaDrive` | Your Facebook page URL |
 | `https://www.instagram.com/GigaDrive` | Your Instagram URL |
 | `https://www.tiktok.com/@GigaDrive` | Your TikTok URL |
@@ -141,7 +142,7 @@ This site is plain HTML — deploy anywhere with zero build steps:
 
 ## 🔢 Number Plate Styling
 
-The G16 DRV number plate is rendered entirely in CSS — no image needed.
+The GIGADRV number plate is rendered entirely in CSS — no image needed.
 
 - `.plate.plate--lg` — Large (hero / CTA band)
 - `.plate.plate--md` — Medium (lesson cards, info cards)

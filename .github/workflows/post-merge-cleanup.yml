@@ -1,0 +1,44 @@
+name: Post-Merge Cleanup
+
+on:
+  pull_request:
+    types: [ closed ]
+    # This ensures the workflow only triggers on PRs aiming into this specific branch
+    branches:
+    - "holding"
+
+jobs:
+  cleanup:
+    # Only run if the PR was actually merged, not just closed without merging
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Make changes (Rename or Delete)
+      continue-on-error: true
+      run: |
+        # Remove the files that are no longer needed after the merge
+        rm -f README.md
+        rm -f about.html
+        rm -f contact.html
+        rm -f lessons.html
+        rm -f robots.txt
+        rm -f sitemap.xml
+        rm -f faq.html
+        rm -f social.html
+        #rm -f privacy.html
+        #rm -f index.html
+
+        # Rename the holding files back to their original names if they exist
+        mv -f index-holding.html index.html || true
+        mv -f privacy-holding.html privacy.html || true
+
+    - name: Commit and Push changes
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        # Only commit if there are actually changes to avoid errors
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Chore: Post-merge file cleanup" && git push)

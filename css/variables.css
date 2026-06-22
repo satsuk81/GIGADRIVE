@@ -7,29 +7,39 @@
    Two ready-made alternate themes are commented out at the bottom.
    ================================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600;700&display=swap');
+/* ================================================================
+   BRAND PALETTE  —  from client consultation
+   ================================================================
+   Primary Colours 
+   Hot Pink      #d44189   PANTONE 213 C
+   Navy Blue     #12345a   PANTONE 295 C
+   Chartreuse    #d7df52   PANTONE 389 C
+   
+   Secondary Colours
+   Pink          #d283a8   PANTONE 680 C
+   Orange        #ee7530   PANTONE 1655 C
+   Aqua          #6dd1e3   PANTONE 305 C
+   Black         #20201e   PANTONE Black 7 C
+   White         #f7f1f3   PANTONE 11-4201 TPG
+   ================================================================ */
 
 :root {
-
-  /* ────────────────────────────────────────────────────────────
-     COLOUR SCHEME
-     Primary   : Midnight Navy   — trust, authority, professionalism
-     Accent    : Pink           — energy, bold, striking
-     ──────────────────────────────────────────────────────────── */
   --c-primary:        #12345A;   /* Midnight Navy — navbar, hero, dark sections, buttons, cards, forms, headings */
   --c-primary-mid:    #1E4D8C;   /* Mid Navy — hero slash, card gradient end, page-hero gradient end, btn hover */
   --c-primary-light:  #2468B0;   /* Light Navy — default links, form focus border, price card hover border */
 
-  --c-accent:         #FF2E9A;   /* Pink "GIGA" — wordmarks, buttons, icons, badges, trust strip, CTA band, stats, checkmarks, hover colours */
-  --c-accent-dark:    #CC2579;   /* Dark Pink — btn hover, link hover, section-label text, FAQ hover */
-  --c-accent-pale:    #FFF0F7;   /* Pale Pink — section-label bg, social hashtag block bg */
+  --c-accent:         #d44189;   /* Hot Pink "GIGA" — wordmarks, buttons, icons, badges, trust strip, CTA band, stats, checkmarks, hover colours */
+  --c-accent-dark:    #AA346D;   /* Dark Pink — btn hover, link hover, section-label text, FAQ hover */
+  --c-accent-pale:    #FBECF3;   /* Pale Pink — section-label bg, social hashtag block bg */
 
-  --c-accent-2:       #D4DE28;   /* Acid Green — "DRIVE" in nav & footer wordmarks only */
-  --c-accent-2-dark:  #A9B220;   /* Dark Lime — reserved for future use */
-  --c-accent-2-pale:  #FAFDE8;   /* Pale Lime — reserved for future use */
+  --c-accent-2:       #d7df52;   /* Lime Yellow — "DRIVE" in nav & footer wordmarks only */
+  --c-accent-2-dark:  #ACB242;   /* Dark Lime Yellow — reserved for future use */
+  --c-accent-2-pale:  #FBFCEE;   /* Pale Lime Yellow — reserved for future use */
 
-  --c-white:          #FFFFFF;   /* Pure White — body bg, text on dark sections, hero headings, form inputs, card backgrounds */
-  --c-dark:           #0D1117;   /* Charcoal Black — text on accent bg, icon fills, CTA heading, form input text, legal headings */
+  --c-slogan:         #6dd1e3;   /* Aqua — PANTONE 305 C */
+
+  --c-white:          #f7f1f3;   /* Warm White — body bg, text on dark sections, hero headings, form inputs, card backgrounds */
+  --c-dark:           #20201e;   /* Charcoal Black — text on accent bg, icon fills, CTA heading, form input text, legal headings */
   --c-body:           #374151;   /* Slate Grey — default paragraph text, price list items, legal body copy */
   --c-muted:          #6B7280;   /* Cool Grey — subtitles, descriptions, placeholders, FAQ answers, testimonial location */
   --c-border:         #E5E7EB;   /* Silver — all card, input, table, FAQ and section divider borders */
@@ -46,13 +56,15 @@
   --c-youtube:        #FF0000;   /* .sc-youtube card hover border & shadow */
   --c-twitter:        #000000;   /* .sc-twitter card (border overridden to #555) */
 
+  /* Both fonts are now loaded locally from css/fonts.css — no Google Fonts dependency. */
+
   /* ────────────────────────────────────────────────────────────
      TYPOGRAPHY
      Barlow Condensed: headings  — bold, punchy, modern
      Barlow:           body copy — clean and highly readable
      ──────────────────────────────────────────────────────────── */
   --font-head: 'Barlow Condensed', 'Impact', sans-serif;
-  --font-body: 'Barlow', 'Segoe UI', sans-serif;
+  --font-body: 'Outfit', 'Segoe UI', sans-serif;
 
   /* ────────────────────────────────────────────────────────────
      LOGO CONFIGURATION
@@ -85,10 +97,10 @@
   --sh-sm: 0 2px 10px rgba(0,0,0,0.10);
   --sh-md: 0 6px 24px rgba(0,0,0,0.13);
   --sh-lg: 0 18px 56px rgba(0,0,0,0.18);
-  --sh-glow: 0 0 0 4px rgba(255,46,154,0.30);
+  --sh-glow: 0 0 0 4px rgba(212,65,137,0.30);
 
   /* ────────────────────────────────────────────────────────────
-     UK NUMBER PLATE  —  G16 DRV
+     UK NUMBER PLATE  —  GIGADRV
      ──────────────────────────────────────────────────────────── */
   --plate-bg:     #FDFD00;   /* Plate Yellow — BS AU 145e rear plate background */
   --plate-txt:    #000000;   /* Jet Black — plate characters and text */
