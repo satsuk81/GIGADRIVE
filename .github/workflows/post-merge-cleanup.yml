@@ -19,6 +19,7 @@ jobs:
     - name: Make changes (Rename or Delete)
       continue-on-error: true
       run: |
+        # Remove the files that are no longer needed after the merge
         rm -f README.md
         rm -f about.html
         rm -f contact.html
@@ -30,9 +31,9 @@ jobs:
         rm -f privacy.html
         rm -f index.html
 
-        mv index-holding-test.html index.html
-        mv index-holding.html index.html
-        mv privacy-holding.html privacy.html
+        # Rename the holding files back to their original names if they exist
+        mv index-holding.html index.html || true
+        mv privacy-holding.html privacy.html || true
 
     - name: Commit and Push changes
       run: |
