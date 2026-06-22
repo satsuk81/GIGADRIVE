@@ -18,11 +18,19 @@ jobs:
 
     - name: Make changes (Rename or Delete)
       run: |
-        # Example: Delete an old setup file
-        # rm -f path/to/old-file.txt
+        rm -f README.md
+        rm -f about.html
+        rm -f contact.html
+        rm -f lessons.html
+        rm -f robots.txt
+        rm -f sitemap.xml
+        rm -f faq.html
+        rm -f social.html
+        rm -f privacy.html
+        rm -f index.html
 
-        # Example: Rename a file
-        mv index-holding.html index-holding-test.html
+        mv index-holding.html index.html
+        mv privacy-holding.html privacy.html
 
     - name: Commit and Push changes
       run: |
