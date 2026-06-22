@@ -17,6 +17,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Make changes (Rename or Delete)
+      continue-on-error: true
       run: |
         rm -f README.md
         rm -f about.html
@@ -29,6 +30,7 @@ jobs:
         rm -f privacy.html
         rm -f index.html
 
+        mv index-holding-test.html index.html
         mv index-holding.html index.html
         mv privacy-holding.html privacy.html
 
