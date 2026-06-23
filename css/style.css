@@ -20,6 +20,16 @@ a:hover { color: var(--c-accent-dark); }
 ul    { list-style: none; }
 button { font-family: var(--font-body); cursor: pointer; }
 
+.accent {
+  color: var(--c-accent); font-style: italic;
+}
+.giga   {
+  color: var(--c-accent); font-style: italic;
+}
+.drive {
+  color: var(--c-accent-2); font-style: normal;
+}
+
 /* ── Layout helpers ───────────────────────────────────────────── */
 .wrap {
   max-width: var(--max-w);
@@ -259,9 +269,7 @@ h1,h2,h3,h4 {
 .nav-wordmark span {
   color: var(--c-accent-2);
 }
-.drive {
-  color: var(--c-accent-2);
-}
+
 .nav-tagline {
   display: block;
   font-size: 0.58rem;
@@ -413,10 +421,7 @@ h1,h2,h3,h4 {
   margin-bottom: 0.6rem;
   text-transform: uppercase;
 }
-.accent { color: var(--c-accent); font-style: italic; }
-.giga   { color: var(--c-accent); font-style: italic; }
-.hero-h1 .accent { color: var(--c-accent); font-style: italic; }
-.hero-h1 .giga   { color: var(--c-accent); font-style: italic; }
+
 .hero-slogan {
   font-family: var(--font-head);
   font-size: clamp(1rem, 2vw, 1.35rem);

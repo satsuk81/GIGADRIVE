@@ -68,7 +68,7 @@ const SHARED_FOOTER = `
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="wordmark"><em class="accent">GIGA</em><span>DRIVE</span></div>
+        <div class="wordmark"><em class="giga">GIGA</em><span>DRIVE</span></div>
         <div class="slogan">Get In Gear And Drive</div>
         <p>Professional driving lessons across Gravesend and surrounding areas. DVSA-approved, outstanding pass rates.</p>
         <div class="footer-plate-row">
@@ -109,7 +109,7 @@ const SHARED_FOOTER = `
   </div>
   <div class="footer-bottom">
     <div class="wrap footer-bottom-inner">
-      <p>© 2026 <em class="accent">GIGA</em><span class="drive">DRIVE</span>. All rights reserved. Gravesend, Kent, UK.</p>
+      <p>© 2026 <em class="giga">GIGA</em><span class="drive">DRIVE</span>. All rights reserved. Gravesend, Kent, UK.</p>
       <div class="footer-bottom-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="privacy.html#cookies">Cookies</a>
@@ -127,7 +127,6 @@ const SHARED_FOOTER_SOCIAL = SHARED_FOOTER
   )
   .replace(
     'All rights reserved. Gravesend, Kent, UK.',
-    'All rights reserved. Vehicle reg. GIGADRV. Gravesend, Kent, UK.'
   );
 
 const SHARED_FOOTER_LEGAL = `
@@ -135,7 +134,7 @@ const SHARED_FOOTER_LEGAL = `
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="wordmark"><em class="accent">GIGA</em><span>DRIVE</span></div>
+        <div class="wordmark"><em class="giga">GIGA</em><span>DRIVE</span></div>
         <div class="slogan">Get In Gear And Drive</div>
         <p>Professional driving lessons across Gravesend and surrounding areas. DVSA-approved, outstanding pass rates.</p>
       </div>
@@ -153,7 +152,7 @@ const SHARED_FOOTER_LEGAL = `
   </div>
   <div class="footer-bottom">
     <div class="wrap footer-bottom-inner">
-      <p>© 2026 <em class="accent">GIGA</em><span class="drive">DRIVE</span>. All rights reserved. Gravesend, Kent, UK.</p>
+      <p>© 2026 <em class="giga">GIGA</em><span class="drive">DRIVE</span>. All rights reserved. Gravesend, Kent, UK.</p>
       <div class="footer-bottom-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="privacy.html#cookies">Cookies</a>
@@ -168,7 +167,7 @@ const SHARED_FOOTER_HOLDING = `
 <footer class="footer" style="padding: 0;" role="contentinfo">
   <div class="footer-bottom">
     <div class="wrap footer-bottom-inner">
-      <p>© 2026 <em class="accent">GIGA</em><span class="drive">DRIVE</span>. All rights reserved. Gravesend, Kent, UK.</p>
+      <p>© 2026 <em class="giga">GIGA</em><span class="drive">DRIVE</span>. All rights reserved. Gravesend, Kent, UK.</p>
       <div class="footer-bottom-links">
         <a href="privacy.html">Privacy Policy</a>
         <a href="privacy.html#cookies">Cookies</a>
