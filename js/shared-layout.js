@@ -14,7 +14,7 @@ const SHARED_HEADER = `
       <li><a href="lessons.html">Lessons &amp; Prices</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="nav-book">Book Now</a></li>
+      <li><a href="booking.html" class="nav-book">Book Now</a></li>
     </ul>
     <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -27,7 +27,7 @@ const SHARED_HEADER = `
   <a href="lessons.html">Lessons &amp; Prices</a>
   <a href="faq.html">FAQ</a>
   <a href="contact.html">Contact</a>
-  <a href="contact.html" class="nav-book">Book Now</a>
+  <a href="booking.html" class="nav-book">Book Now</a>
 </nav>
 `;
 
@@ -88,7 +88,7 @@ const SHARED_FOOTER = `
           <li><a href="lessons.html">Lessons &amp; Prices</a></li>
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html">Book a Lesson</a></li>
+          <li><a href="booking.html">Book a Lesson</a></li>
         </ul>
       </div>
       <div class="footer-col">
