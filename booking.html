@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact GIGADRIVE — book driving lessons in Gravesend and surrounding areas. Call, email or use our online form. New pupils always welcome." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Contact &amp; Book Driving Lessons | GIGADRIVE" />
+  <meta property="og:description" content="Book driving lessons in Gravesend and surrounding areas. Call, email or fill in our form — we'll get back to you fast. New pupils always welcome." />
+  <meta property="og:image"       content="https://www.gigadrive.co.uk/images/Open-Graph_2-Square Logo.jpg" />
+  <meta property="og:url"         content="https://www.gigadrive.co.uk/contact.html" />
+  <meta name="twitter:card"       content="summary_large_image" />
+  <title>Book Driving Lessons in Gravesend | GIGADRIVE</title>
+  <link rel="icon" type="image/x-icon" href="images/GD_32x32.ico" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/fonts.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.gigadrive.co.uk/#business",
+    "name": "GIGADRIVE",
+    "url": "https://www.gigadrive.co.uk",
+    "mainEntityOfPage": "https://www.gigadrive.co.uk/contact.html",
+    "description": "DVSA-approved driving lessons across Gravesend and surrounding areas.",
+    "logo": "https://www.gigadrive.co.uk/images/GD_1-Primary Logo_Colored.png",
+    "image": "https://www.gigadrive.co.uk/images/og-image.jpg",
+    "telephone": "+447909117574",
+    "email": "gigadriveuk@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gravesend",
+      "addressRegion": "Kent",
+      "addressCountry": "GB"
+    },
+    "areaServed": [
+      "Gravesend", "Northfleet", "Swanscombe", "Ebbsfleet", "Dartford",
+      "Longfield", "Meopham", "Cobham", "Higham", "Strood", "Rochester", "Chatham"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/GIGADRIVEUK",
+      "https://www.instagram.com/GIGADRIVEUK",
+      "https://www.tiktok.com/@GIGADRIVEUK"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<div id="site-header"></div>
+
+<section class="section" aria-label="Booking form">
+  <div class="wrap">
+    <div class="contact-form-wrap reveal" style="max-width:760px; margin:0 auto;">
+      <h2>Book a Lesson</h2>
+      <p style="color:var(--c-muted);margin-bottom:1.5rem;font-size:0.95rem;">Fill in your details and we'll be in touch to confirm your booking. Usually within 24 hours.</p>
+
+      <form id="gigaContactForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-name">Your Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="f-phone">Phone Number <span aria-hidden="true">*</span></label>
+            <input type="tel" id="f-phone" name="phone" placeholder="07909 11 75 74" required autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="f-email">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="f-email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="f-area">Your Area / Town</label>
+          <input type="text" id="f-area" name="area" placeholder="e.g. Gravesend" autocomplete="address-level2" />
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="f-type">Lesson Type</label>
+            <select id="f-type" name="lesson_type">
+              <option value="">Select a lesson type…</option>
+              <option value="beginner">Beginner Lessons</option>
+              <option value="refresher">Refresher Lessons</option>
+              <option value="theory">Theory Test Support</option>
+              <option value="not-sure">Not Sure Yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-experience">Your Experience Level</label>
+            <select id="f-experience" name="experience">
+              <option value="">Select experience…</option>
+              <option value="none">Never driven before</option>
+              <option value="some">Some experience / part-way through lessons</option>
+              <option value="test-ready">Almost ready for test</option>
+              <option value="refresher">Already passed, need refresher</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="f-message">Anything Else We Should Know?</label>
+          <textarea id="f-message" name="message" rows="4" placeholder="Preferred days/times, any concerns, questions about coverage area…"></textarea>
+        </div>
+
+        <div class="form-group form-group--checkbox">
+          <input type="checkbox" id="f-privacy" name="privacy" required />
+          <label for="f-privacy">I agree to GIGADRIVE's <a href="privacy.html" target="_blank">Privacy Policy</a> and consent to being contacted regarding driving lessons. <span aria-hidden="true">*</span></label>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-full btn-lg" id="form-submit-btn">
+          Send Enquiry
+        </button>
+
+        <div id="form-success" class="form-success" role="alert" aria-live="polite" hidden>
+          ✅ Thank you! We'll be in touch within 24 hours to confirm your lesson booking.
+        </div>
+        <div id="form-error" class="form-error" role="alert" aria-live="polite" hidden>
+          ⚠️ Something went wrong. Please call us on <a href="tel:+447909117574">07909 11 75 74</a> instead.
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/shared-layout.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
