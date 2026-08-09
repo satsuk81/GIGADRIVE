@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!phoneTrimmed) {
       setError(phone, 'Please enter your phone number.');
     } else if (!/^(\+447|07)\d{9}$/.test(phoneTrimmed)) {
-      setError(phone, 'Please enter a valid UK mobile number (e.g. 07700 000 000).');
+      setError(phone, 'Please enter a valid UK mobile number (e.g. 07909 11 75 74).');
     }
 
     const emailTrimmed = email.value.trim();
