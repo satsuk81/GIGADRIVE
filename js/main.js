@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
   //   YOUR_PUBLIC_KEY  → Account > API Keys
   //   YOUR_SERVICE_ID  → Email Services > your service
   //   YOUR_TEMPLATE_ID → Email Templates > your template
-  const EMAILJS_PUBLIC_KEY  = 'vO2HzkiGLBq6IuzPT';
-  const EMAILJS_SERVICE_ID  = 'service_5rrapzf';
-  const EMAILJS_TEMPLATE_ID = 'template_xftl3xd';
+  const EMAILJS_PUBLIC_KEY  = 'UQ_1lvJj-PtAc7PGe';
+  const EMAILJS_SERVICE_ID  = 'service_dor1qyn';
+  const EMAILJS_TEMPLATE_ID = 'template_3ekyp4v';
 
   function sendContactForm(formEl) {
     return emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formEl);
